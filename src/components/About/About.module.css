@@ -1,0 +1,75 @@
+/* About/About.module.css */
+.aboutSection {
+    background-color: #252b59; /* White background */
+    padding: 60px 20px;
+    margin-top: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 900px; /* Limit width */
+    margin: 40px auto; /* Center section horizontally */
+    font-family: 'Playfair Display', serif; /* Italian-style font */
+  }
+  
+  .greetingWrapper {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .firstParagraph {
+    margin-bottom: 2rem;
+  }
+  .greetingText {
+    font-size: 3.5rem;
+    font-weight: bold; /* Make text bold */
+    color: #e4e8ec;
+    animation: fadeInText 2s ease-in-out forwards;
+    font-family: 'Playfair Display', serif; /* Italian-style font */
+  }
+  
+  .aboutText {
+    font-size: 1.5rem;
+    font-weight: normal; /* Make text bold */
+    color: #bebcbc;
+    line-height: 1.6;
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Playfair Display', serif; /* Italian-style font */
+  }
+  
+  @keyframes fadeInText {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive Layout */
+  @media screen and (max-width: 768px) {
+    .aboutSection {
+      padding: 40px 15px;
+    }
+  
+    .greetingText {
+      font-size: 2rem;
+    }
+  
+    .aboutText {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .aboutSection {
+      padding: 30px 10px;
+    }
+  
+    .greetingText {
+      font-size: 1.6rem;
+    }
+  
+    .aboutText {
+      font-size: 0.85rem;
+    }
+  }
+  

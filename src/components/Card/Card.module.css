@@ -1,0 +1,161 @@
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+.summary {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* --- Platform Modal Styles for Competitive Programming --- */
+.platformModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 1rem;
+}
+
+.closePlatformButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.closePlatformButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.platformCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.platformCard {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.platformCard:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.profileLink {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #00bcd4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.profileLink:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design for main card */
+@media (max-width: 768px) {
+  .card {
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .icon {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 0.8rem;
+    border-radius: 8px;
+  }
+
+  .icon {
+    font-size: 1.2rem;
+  }
+}
+
+/* Responsive design for platform modal */
+@media (max-width: 768px) {
+  .platformModal {
+    padding: 1rem;
+  }
+  .platformCard {
+    padding: 0.8rem;
+  }
+  .closePlatformButton {
+    font-size: 20px;
+    padding: 8px;
+    top: 15px;
+    right: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .platformModal {
+    padding: 0.5rem;
+  }
+  .platformCard {
+    padding: 0.5rem;
+  }
+  .closePlatformButton {
+    font-size: 18px;
+    padding: 6px;
+    top: 10px;
+    right: 10px;
+  }
+}

@@ -1,0 +1,70 @@
+/* src/App.css */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #252b59; /* Dark background */
+  color: #fff;
+  line-height: 1.6;
+}
+html {
+  scroll-behavior: smooth;
+}
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .socialLinks {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+main {
+  padding: 2rem 0;
+}
+/* Floating Button Styles */
+/* Floating Button Styles */
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 15px 25px;
+  font-size: 16px;
+  border-radius: 30px;
+  backdrop-filter: blur(8px); /* Glass effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect */
+.floating-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+.floating-button:focus {
+  outline: none;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .floating-button {
+    bottom: 15px; /* Adjust position for mobile */
+    right: 15px; /* Adjust position for mobile */
+    padding: 12px 20px; /* Smaller button on mobile */
+    font-size: 14px; /* Smaller text on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-button {
+    bottom: 10px; /* Further adjustment for very small screens */
+    right: 10px;
+    padding: 10px 15px; /* Even smaller button */
+    font-size: 12px; /* Smaller text */
+  }
+}
+

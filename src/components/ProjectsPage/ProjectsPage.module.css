@@ -1,0 +1,185 @@
+/* General Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #5188e6; /* Set a light gray background for the page */
+  }
+  
+  /* Title */
+  .title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #f8f7f7; /* Dark text color for visibility */
+  }
+  
+  /* Project Card */
+  .projectCard {
+    background-color: #0e1125; /* White background for project cards */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .projectTitle {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fbf5f5; /* Dark text color for project title */
+  }
+  
+  .projectDescription {
+    font-size: 1rem;
+    margin: 15px 0;
+    color: #fefafa; /* Light gray text for description */
+  }
+  
+  /* Technologies List */
+  .technologies {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .techItem {
+    display: inline-block;
+    background-color: #7cb0e4; /* Blue background for tech items */
+    color: rgb(34, 25, 25); /* White text color for contrast */
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+  }
+  
+  /* Links */
+  .links a {
+    color: #007bff; /* Blue link color */
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 20px;
+  }
+  
+  .links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Icons */
+.icon {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.closeButton {
+  margin-top: 20px;
+  margin-left: 560px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: rgb(252, 247, 247);
+  background-color:rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.closeButton:hover {
+  background-color: #75797e;
+}
+/* Button */
+.moreButton {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.moreButton:hover {
+  background-color: #0056b3;
+}
+
+
+  /* Images */
+  .images {
+    margin-top: 20px;
+  }
+  
+  .projectImage {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  /* Responsive Layout */
+  @media screen and (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+  
+    .title {
+      font-size: 1.5rem;
+    }
+  
+    .projectCard {
+      padding: 15px;
+    }
+  
+    .projectTitle {
+      font-size: 1.5rem;
+    }
+  
+    .projectDescription {
+      font-size: 0.9rem;
+    }
+  
+    .techItem {
+      font-size: 0.85rem;
+    }
+  
+    .links a {
+      font-size: 0.9rem;
+    }
+  
+    .projectImage {
+      width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .title {
+      font-size: 1.25rem;
+    }
+  
+    .projectCard {
+      padding: 10px;
+    }
+  
+    .projectTitle {
+      font-size: 1.3rem;
+    }
+  
+    .projectDescription {
+      font-size: 0.85rem;
+    }
+  
+    .techItem {
+      font-size: 0.8rem;
+    }
+  
+    .links a {
+      font-size: 0.85rem;
+    }
+  
+    .projectImage {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  

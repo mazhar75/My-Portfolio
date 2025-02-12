@@ -1,0 +1,46 @@
+/* src/components/ContentGrid/ContentGrid.module.css */
+.grid {
+  display: flex;
+  flex-direction: column; /* Stack cards vertically by default */
+  gap: 1.5rem; /* Space between cards */
+  padding: 2rem;
+  max-width: 800px; /* Limit width for better readability */
+  margin: 0 auto; /* Center the grid */
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%; /* Full width */
+}
+
+.cardLink {
+  text-decoration: none;
+  color: inherit; /* Inherit text color */
+  display: block; /* Make the entire card clickable */
+}
+
+.cardLink:hover {
+  text-decoration: none; /* Remove underline on hover */
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two cards per row on medium screens */
+      gap: 2rem; /* Increase spacing between cards */
+  }
+
+  .card {
+      width: auto; /* Allow cards to fit their grid column */
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid {
+      grid-template-columns: repeat(3, 1fr); /* Three cards per row on larger screens */
+  }
+}

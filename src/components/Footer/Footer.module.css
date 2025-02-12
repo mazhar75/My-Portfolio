@@ -1,0 +1,36 @@
+/* src/components/Footer/Footer.module.css */
+.footer {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  p {
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+  
+  .socialLinks {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .socialLinks a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .socialLinks a:hover {
+    color: #00bcd4; /* Accent color on hover */
+  }

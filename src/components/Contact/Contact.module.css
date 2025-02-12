@@ -1,0 +1,120 @@
+/* src/components/Contact/Contact.module.css */
+.contact {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 4rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  p {
+    color: #ccc;
+    margin-bottom: 2rem;
+  }
+  
+  .contactInfo {
+    margin-bottom: 2rem;
+  }
+  
+  .contactInfo p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+  }
+  
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  input, textarea {
+    padding: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+  
+  .submitButton {
+    padding: 0.75rem 1.5rem;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .submitButton:hover {
+    background: #0097a7;
+  }
+  /* Close Button */
+/* Close Button */
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  backdrop-filter: blur(8px); /* Glass effect */
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Hover and focus states */
+.closeButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.closeButton:focus {
+  outline: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .closeButton {
+    top: 15px; /* Adjust the position on smaller screens */
+    right: 15px;
+    font-size: 18px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .closeButton {
+    top: 20px; /* Adjust further for mobile screens */
+    right: 20px;
+    font-size: 16px;
+    padding: 14px;
+  }
+}
+

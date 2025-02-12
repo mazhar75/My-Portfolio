@@ -1,0 +1,84 @@
+/* src/components/Header/Header.module.css */
+.header {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #00bcd4; /* Accent color */
+  margin-bottom: 1.5rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #00bcd4; /* Accent color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+      padding: 1rem 0;
+  }
+
+  h1 {
+      font-size: 2rem; /* Reduce font size for smaller screens */
+  }
+
+  p {
+      font-size: 1rem; /* Adjust paragraph font size */
+  }
+
+  .nav {
+      flex-direction: column; /* Stack navigation links vertically */
+      gap: 1rem; /* Reduce spacing between links */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+      padding: 0 1rem; /* Reduce padding for extra-small screens */
+  }
+
+  h1 {
+      font-size: 1.8rem; /* Further reduce heading size */
+  }
+
+  p {
+      font-size: 0.9rem; /* Adjust paragraph size for smaller screens */
+  }
+
+  .nav a {
+      font-size: 0.9rem; /* Smaller navigation font size */
+  }
+}

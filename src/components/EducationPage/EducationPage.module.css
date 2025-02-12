@@ -1,0 +1,104 @@
+.educationSection {
+    background-color: black;
+    color: white;
+    padding: 40px 20px;
+    position: relative; /* For positioning the close button */
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  .cardContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .institution {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .degree, .result, .specialCase {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+  
+  /* Close Button */
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    backdrop-filter: blur(8px); /* Glass effect */
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slight shadow for better visibility */
+  }
+  
+  .closeButton:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  .closeButton:focus {
+    outline: none;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 1200px) {
+    .cardContainer {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .cardContainer {
+      grid-template-columns: 1fr;
+    }
+  
+    .title {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* For screens where there are only two cards remaining (e.g., for mobile view) */
+  @media (max-width: 480px) {
+    .cardContainer {
+      grid-template-columns: repeat(2, 1fr); /* Ensures 2 cards per row */
+      justify-content: center; /* Center the cards horizontally */
+    }
+  
+    .card {
+      padding: 15px;
+      width: 90%; /* Restricts the width for better spacing */
+    }
+  
+    .title {
+      font-size: 1.2rem;
+    }
+  
+    .institution {
+      font-size: 1rem;
+    }
+  
+    .degree, .result, .specialCase {
+      font-size: 0.9rem;
+    }
+  }
+  

@@ -20,7 +20,7 @@ Welcome to my portfolio repository! This project is a personal portfolio website
 ## Demo
 
 Check out the live site hosted on Vercel:  
-[https://your-portfolio.vercel.app](https://mazharul.vercel.app/)
+[https://mazharul.vercel.app](https://mazharul.vercel.app/)
 
 ---
 

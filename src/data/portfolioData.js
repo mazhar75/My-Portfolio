@@ -8,30 +8,30 @@ export const cards = [
     details: {
       Codeforces: {
         handle: "petuk75",
-        maxRating: "1512",
+        maxRating: "1515",
         problemsSolved: "1200+",
         highestRanking: "Top 800",
         profileLink: "https://codeforces.com/profile/petuk75"
       },
       AtCoder: {
         handle: "petuk",
-        maxRating: "855",
-        problemsSolved: "300+",
+        maxRating: "928",
+        problemsSolved: "400+",
         highestRanking: "Top 1100",
         profileLink: "https://atcoder.jp/users/petuk"
       },
       CodeChef: {
         handle: "petuk0mazhar",
-        maxRating: "1777",
+        maxRating: "1795",
         problemsSolved: "300+",
         highestRanking: "Top 500",
         profileLink: "https://www.codechef.com/users/petuk0mazhar"
       },
       LeetCode: {
         handle: "petuk",
-        maxRating: "1691",
-        problemsSolved: "80+",
-        highestRanking: "Top 13.6%",
+        maxRating: "1713",
+        problemsSolved: "100+",
+        highestRanking: "Top 12%",
         profileLink: "https://leetcode.com/u/petuk/"
       },
       "Other Platforms": {

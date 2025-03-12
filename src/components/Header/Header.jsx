@@ -7,7 +7,7 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.container}>
         <h1>Md. Mazharul Islam</h1>
-        <p>Problem Solver | Technology Enthusiast</p>
+        <p>Problem Solver | Technology Enthusiast | NLP Enthusiast</p>
       </div>
     </header>
   );

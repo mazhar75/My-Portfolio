@@ -5,7 +5,7 @@ import styles from './About.module.css';
 const About = () => {
   const [greetingIndex, setGreetingIndex] = useState(0);
 
-  const greetings = ["Assalamualaikum", "I am a", "Technology Enthusiast", " And Problem Solver"];
+  const greetings = ["Assalamualaikum", "I am a", "Technology Enthusiast", " Problem Solver","NLP Enthusiast"];
 
   useEffect(() => {
     const interval = setInterval(() => {

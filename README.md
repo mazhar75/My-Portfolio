@@ -12,7 +12,6 @@ Welcome to my portfolio repository! This project is a personal portfolio website
 - [Getting Started](#getting-started)
 - [Project Structure](#project-structure)
 - [Contributing](#contributing)
-- [License](#license)
 - [Contact](#contact)
 
 ---

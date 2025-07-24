@@ -23,10 +23,9 @@ main {
   padding: 2rem 0;
 }
 /* Floating Button Styles */
-/* Floating Button Styles */
 .floating-button {
   position: fixed;
-  bottom: 20px;
+  bottom: 100px; /* Moved up to avoid overlap with MinAssistant */
   right: 20px;
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
@@ -52,19 +51,19 @@ main {
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .floating-button {
-    bottom: 15px; /* Adjust position for mobile */
-    right: 15px; /* Adjust position for mobile */
-    padding: 12px 20px; /* Smaller button on mobile */
-    font-size: 14px; /* Smaller text on mobile */
+    bottom: 75px; /* Adjusted for tablet */
+    right: 15px;
+    padding: 12px 20px;
+    font-size: 14px;
   }
 }
 
 @media (max-width: 480px) {
   .floating-button {
-    bottom: 10px; /* Further adjustment for very small screens */
+    bottom: 65px; /* Adjusted for mobile */
     right: 10px;
-    padding: 10px 15px; /* Even smaller button */
-    font-size: 12px; /* Smaller text */
+    padding: 10px 15px;
+    font-size: 12px;
   }
 }
 

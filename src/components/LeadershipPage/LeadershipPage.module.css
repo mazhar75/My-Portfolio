@@ -1,0 +1,90 @@
+.leadershipSection {
+  background: linear-gradient(135deg, #23243a 0%, #3a3d5c 100%);
+  padding: 48px 16px 32px 16px;
+  border-radius: 16px;
+  max-width: 700px;
+  margin: 40px auto;
+  box-shadow: 0 4px 16px rgba(0,188,212,0.08), 0 2px 8px rgba(0,0,0,0.10);
+  color: #fff;
+}
+
+.title {
+  font-size: 2.2rem;
+  color: #00bcd4;
+  font-weight: 700;
+  margin-bottom: 2.2rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.timelineSection {
+  margin-bottom: 2.2rem;
+}
+
+.sectionTitle {
+  color: #00bcd4;
+  font-size: 1.3rem;
+  margin-bottom: 1.1rem;
+  font-weight: 600;
+}
+
+.timelineList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timelineItem {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+.timelineDot {
+  width: 14px;
+  height: 14px;
+  background: #00bcd4;
+  border-radius: 50%;
+  margin-right: 1rem;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 3px rgba(0,188,212,0.15);
+}
+
+.timelineContent {
+  font-size: 1.08rem;
+  color: #e0e0e0;
+  background: rgba(255,255,255,0.04);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  flex: 1;
+}
+
+.leadershipCard {
+  background: #00bcd4;
+  color: #23243a;
+  font-size: 1.08rem;
+  font-weight: 600;
+  padding: 0.7rem 1.2rem;
+  border-radius: 20px;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .leadershipSection {
+    padding: 24px 4px 16px 4px;
+    max-width: 98vw;
+  }
+  .title {
+    font-size: 1.3rem;
+  }
+  .sectionTitle {
+    font-size: 1.05rem;
+  }
+  .timelineContent, .leadershipCard {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.7rem;
+  }
+} 

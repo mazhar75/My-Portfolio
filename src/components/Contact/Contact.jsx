@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
 import styles from './Contact.module.css';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,7 +9,6 @@ const Contact = () => {
     subject: '',
     message: ''
   });
-  const navigate = useNavigate(); // Initialize the navigate function
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,51 +17,46 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     const formspreeEndpoint = `https://formspree.io/f/xrbeloqo`;
-
     try {
       const response = await fetch(formspreeEndpoint, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
-
       if (response.ok) {
         alert('Thank you for your message! I will get back to you soon.');
-        setFormData({ name: '', email: '', subject: '', message: '' }); // Reset form
+        setFormData({ name: '', email: '', subject: '', message: '' });
       } else {
         alert('Something went wrong. Please try again later.');
       }
     } catch (error) {
-      console.error('Error submitting form:', error);
       alert('An error occurred. Please try again later.');
     }
   };
 
   return (
-    <section id="contact" className={styles.contact}>
-      <div className={styles.container}>
-        {/* Close button in upper-right corner */}
-        <button
-          className={styles.closeButton}
-          onClick={() => navigate('/')} // Navigate to home page
-        >
-          X
-        </button>
-        
-        <h2>Contact Me</h2>
-        <p>Feel free to reach out for collaborations or just a friendly hello!</p>
-
-        <div className={styles.contactInfo}>
-          <p>Email: mazharulnihadmd@gmail.com</p>
-          <p>Phone: (+880) 17-4134-3513</p>
+    <section id="contact" className={styles.contactSection}>
+      <div className={styles.contactContainer}>
+        <h2 className={styles.contactTitle}>Contact Me</h2>
+        <div className={styles.divider}></div>
+        <p className={styles.contactSubtitle}>Ready to connect? Reach out for collaborations or just to say hello!</p>
+        <div className={styles.contactInfoBox}>
+          <div className={styles.contactInfoItem}>
+            <FaEnvelope className={styles.contactIcon} />
+            <span className={styles.emailHighlight}>mazharulnihadmd@gmail.com</span>
+          </div>
+          <div className={styles.socialLinksRow}>
+            <a href="https://github.com/mazhar75" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+              <FaGithub className={styles.contactIcon} /> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/md-mazharul-islamam-7994a5212/" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+              <FaLinkedin className={styles.contactIcon} /> LinkedIn
+            </a>
+          </div>
         </div>
-
         <form onSubmit={handleSubmit} className={styles.contactForm}>
-          <div className={styles.formGroup}>
+          <div className={styles.formRow}>
             <input
               type="text"
               name="name"
@@ -70,9 +64,8 @@ const Contact = () => {
               value={formData.name}
               onChange={handleChange}
               required
+              className={styles.input}
             />
-          </div>
-          <div className={styles.formGroup}>
             <input
               type="email"
               name="email"
@@ -80,27 +73,26 @@ const Contact = () => {
               value={formData.email}
               onChange={handleChange}
               required
+              className={styles.input}
             />
           </div>
-          <div className={styles.formGroup}>
-            <input
-              type="text"
-              name="subject"
-              placeholder="Subject"
-              value={formData.subject}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className={styles.formGroup}>
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            />
-          </div>
+          <input
+            type="text"
+            name="subject"
+            placeholder="Subject"
+            value={formData.subject}
+            onChange={handleChange}
+            required
+            className={styles.input}
+          />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+            className={styles.textarea}
+          />
           <button type="submit" className={styles.submitButton}>Send Message</button>
         </form>
       </div>

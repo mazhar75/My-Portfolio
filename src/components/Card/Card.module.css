@@ -1,161 +1,488 @@
 .card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
-  padding: 1.5rem;
   cursor: pointer;
-  transition: transform 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, #23243a 0%, #3a3d5c 100%);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,188,212,0.08), 0 1.5px 8px rgba(0,0,0,0.10);
+  padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.18s, box-shadow 0.18s, border 0.18s;
+  border: 2px solid rgba(0,188,212,0.10);
+  position: relative;
+  overflow: hidden;
+  min-height: 220px;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transform: translateY(-8px) scale(1.045);
+  box-shadow: 0 8px 32px rgba(0,188,212,0.18), 0 2px 16px rgba(0,0,0,0.13);
+  border: 2.5px solid #00bcd4;
 }
 
 .cardHeader {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 0.7rem;
   margin-bottom: 1rem;
 }
 
 .icon {
-  font-size: 2rem;
+  font-size: 2.7rem;
+  color: #00bcd4;
+  filter: drop-shadow(0 2px 8px rgba(0,188,212,0.18));
+  margin-bottom: 0.5rem;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
 }
 
 .summary {
-  font-size: 1rem;
-  color: #ccc;
+  font-size: 1.05rem;
+  color: #e0e0e0;
+  margin-bottom: 0.2rem;
+  min-height: 2.5rem;
+  text-align: center;
 }
 
-/* --- Platform Modal Styles for Competitive Programming --- */
-.platformModal {
+.cardDetailsSection {
+  margin-top: 0.7rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.badge {
+  display: inline-block;
+  background: #00bcd4;
+  color: #23243a;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.3rem 1.1rem;
+  border-radius: 20px;
+  margin: 0.2rem 0.3rem 0.2rem 0;
+  letter-spacing: 0.2px;
+}
+
+/* Competitive Programming Modal Styles */
+.cpModalOverlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 2000;
-  padding: 1rem;
+  z-index: 3000;
 }
 
-.closePlatformButton {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: rgba(255, 255, 255, 0.2);
+.cpModal {
+  background: linear-gradient(135deg, #23243a 0%, #3a3d5c 100%);
+  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 18px;
+  width: 95%;
+  max-width: 700px;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0,188,212,0.18);
   color: #fff;
-  border: none;
-  font-size: 24px;
-  padding: 10px;
-  border-radius: 50%;
-  backdrop-filter: blur(8px);
-  cursor: pointer;
-  transition: background 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+  max-height: 90vh;
 }
 
-.closePlatformButton:hover {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.platformCards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  width: 100%;
-  max-width: 1000px;
-}
-
-.platformCard {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 1rem;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  text-align: left;
-  transition: transform 0.3s ease;
-}
-
-.platformCard:hover {
-  transform: translateY(-3px);
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.profileLink {
-  display: inline-block;
-  margin-top: 0.5rem;
+.cpTitle {
+  font-size: 2rem;
   color: #00bcd4;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.cpSection {
+  margin-bottom: 2rem;
+}
+
+.cpSection h3 {
+  color: #00bcd4;
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
+.cpPlatformGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+
+.cpPlatformCard {
+  background: rgba(255,255,255,0.04);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  border: 1px solid rgba(0,188,212,0.08);
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cpPlatformCard h4 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.cpBadge {
+  display: inline-block;
+  background: #00bcd4;
+  color: #23243a;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.25rem 0.8rem;
+  border-radius: 20px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.2px;
+}
+
+.cpList {
+  list-style: disc inside;
+  color: #e0e0e0;
+  font-size: 1.05rem;
+  margin-left: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .cpModal {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    max-width: 98vw;
+  }
+  .cpTitle {
+    font-size: 1.3rem;
+  }
+  .cpSection h3 {
+    font-size: 1rem;
+  }
+  .cpPlatformGrid {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+  }
+  .cpPlatformCard {
+    padding: 0.7rem 0.5rem;
+  }
+  .cpBadge {
+    font-size: 0.85rem;
+    padding: 0.18rem 0.5rem;
+  }
+  .cpList {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cpModal {
+    padding: 0.5rem 0.2rem 0.5rem 0.2rem;
+  }
+  .cpTitle {
+    font-size: 1.1rem;
+  }
+  .cpSection h3 {
+    font-size: 0.9rem;
+  }
+  .cpBadge {
+    font-size: 0.75rem;
+    padding: 0.12rem 0.3rem;
+  }
+  .cpList {
+    font-size: 0.85rem;
+  }
+}
+
+/* Old platform modal styles are commented out below for reference */
+/*
+.platformModal { ... }
+.platformCard { ... }
+*/
+
+.cpBarContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: 1.2rem 0 0.7rem 0;
+  background: linear-gradient(90deg, #23243a 0%, #3a3d5c 100%);
+  border-top: 2px solid #00bcd4;
+  border-bottom: 2px solid #00bcd4;
+  margin-top: 2rem;
+  margin-bottom: 3.5rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cpBarCard {
+  background: linear-gradient(135deg, #23243a 0%, #2e2f4d 100%);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,188,212,0.10), 0 1.5px 8px rgba(0,0,0,0.10);
+  padding: 1rem 1.1rem 1rem 1.1rem;
+  min-width: 180px;
+  max-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #fff;
+  border-left: 7px solid #00bcd4;
+  transition: box-shadow 0.18s, transform 0.18s, border 0.18s;
+  margin-bottom: 0.5rem;
+  height: 100%;
+}
+
+.cpBarCardFooter {
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.cpBarCard:hover {
+  box-shadow: 0 8px 32px rgba(0,188,212,0.18), 0 2px 16px rgba(0,0,0,0.13);
+  transform: translateY(-2px) scale(1.045);
+  border-left: 7px solid #00e6ff;
+}
+
+.cpBarCardTitle {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #00e6ff;
+  margin-bottom: 0.3rem;
+  letter-spacing: 1.2px;
+  font-family: 'Segoe UI Semibold', 'Segoe UI', 'Arial', sans-serif;
+  text-shadow: 0 2px 8px rgba(0,188,212,0.18), 0 0 6px #00e6ff44;
+  background: linear-gradient(90deg, #00e6ff 0%, #00bcd4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cpBarCardStat {
+  font-size: 0.93rem;
+  color: #e0e0e0;
+  margin-bottom: 0.1rem;
+  letter-spacing: 0.5px;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  text-shadow: 0 1px 4px #00bcd455;
+  background: linear-gradient(90deg, #e0e0e0 60%, #00bcd4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cpBarCardLink {
+  display: block;
+  width: 90%;
+  text-align: center;
+  background: linear-gradient(90deg, #00e6ff 0%, #00bcd4 100%);
+  color: #23243a;
+  font-weight: 700;
+  border-radius: 22px;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  letter-spacing: 0.7px;
+  font-family: 'Segoe UI Semibold', 'Segoe UI', 'Arial', sans-serif;
   text-decoration: none;
-  font-weight: bold;
+  box-shadow: 0 2px 8px #00e6ff33;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.18s;
 }
 
-.profileLink:hover {
-  text-decoration: underline;
+.cpBarCardLink:hover {
+  background: linear-gradient(90deg, #00bcd4 0%, #00e6ff 100%);
+  color: #fff;
+  box-shadow: 0 0 16px #00e6ff, 0 0 24px #00bcd4;
+  transform: translateY(-2px) scale(1.04);
 }
 
-/* Responsive design for main card */
+.cpBarCardSection {
+  margin-bottom: 0.3rem;
+}
+
+@media (max-width: 900px) {
+  .cpBarContainer {
+    gap: 0.7rem;
+    padding: 0.7rem 0 0.3rem 0;
+  }
+  .cpBarCard {
+    min-width: 120px;
+    max-width: 98vw;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  }
+}
+
+.projectBarContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1.2rem;
+  padding: 1.2rem 0 0.7rem 0;
+  background: linear-gradient(90deg, #23243a 0%, #2e2f4d 100%);
+  border-top: 2px solid #00bcd4;
+  border-bottom: 2px solid #00bcd4;
+  margin-top: 2rem;
+  margin-bottom: 3.5rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projectBarCard {
+  background: linear-gradient(135deg, #23243a 0%, #3a3d5c 100%);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,188,212,0.10), 0 1.5px 8px rgba(0,0,0,0.10);
+  padding: 1rem 1.1rem 1rem 1.1rem;
+  min-width: 220px;
+  max-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #fff;
+  border-left: 7px solid #00bcd4;
+  transition: box-shadow 0.18s, transform 0.18s, border 0.18s;
+  margin-bottom: 0.5rem;
+  height: 340px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  justify-content: flex-start;
+}
+
+.projectBarCardFooter {
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.projectBarCard:hover {
+  box-shadow: 0 8px 32px rgba(0,188,212,0.18), 0 2px 16px rgba(0,0,0,0.13);
+  transform: translateY(-2px) scale(1.045);
+  border-left: 7px solid #00e6ff;
+}
+
+.projectBarCardTitle {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #00e6ff;
+  margin-bottom: 0.3rem;
+  letter-spacing: 1.2px;
+  font-family: 'Segoe UI Semibold', 'Segoe UI', 'Arial', sans-serif;
+  text-shadow: 0 2px 8px rgba(0,188,212,0.18), 0 0 6px #00e6ff44;
+  background: linear-gradient(90deg, #00e6ff 0%, #00bcd4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.projectBarCardDesc {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  margin-bottom: 0.3rem;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  text-shadow: 0 1px 4px #00bcd455;
+}
+
+.projectBarCardTech {
+  font-size: 0.88rem;
+  color: #00e6ff;
+  margin-bottom: 0.3rem;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.projectBarCardFooter {
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.projectBarCardLink {
+  display: block;
+  text-align: center;
+  background: linear-gradient(90deg, #00e6ff 0%, #00bcd4 100%);
+  color: #23243a;
+  font-weight: 700;
+  border-radius: 22px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  letter-spacing: 0.7px;
+  font-family: 'Segoe UI Semibold', 'Segoe UI', 'Arial', sans-serif;
+  text-decoration: none;
+  box-shadow: 0 2px 8px #00e6ff33;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.18s;
+  margin: 0 auto;
+}
+
+.projectBarCardLink:hover {
+  background: linear-gradient(90deg, #00bcd4 0%, #00e6ff 100%);
+  color: #fff;
+  box-shadow: 0 0 16px #00e6ff, 0 0 24px #00bcd4;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.skillsHighlightBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.2rem;
+  background: linear-gradient(90deg, #00e6ff 0%, #00bcd4 100%);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px #00e6ff33;
+  padding: 1.1rem 1.5rem;
+  margin: 2.5rem auto 0.7rem auto;
+  max-width: 900px;
+  font-size: 1.18rem;
+  font-weight: 600;
+  color: #23243a;
+  letter-spacing: 0.5px;
+}
+
+.skillItem {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 1.18rem;
+  color: #23243a;
+  background: rgba(255,255,255,0.13);
+  border-radius: 12px;
+  padding: 0.3rem 1.1rem;
+  font-weight: 700;
+  box-shadow: 0 1px 4px #00bcd433;
+}
+
 @media (max-width: 768px) {
-  .card {
-    padding: 1rem;
-    border-radius: 10px;
+  .skillsHighlightBar {
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 1rem;
+    padding: 0.7rem 0.5rem;
   }
-
-  .cardHeader {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-
-  .icon {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .card {
-    padding: 0.8rem;
-    border-radius: 8px;
-  }
-
-  .icon {
-    font-size: 1.2rem;
-  }
-}
-
-/* Responsive design for platform modal */
-@media (max-width: 768px) {
-  .platformModal {
-    padding: 1rem;
-  }
-  .platformCard {
-    padding: 0.8rem;
-  }
-  .closePlatformButton {
-    font-size: 20px;
-    padding: 8px;
-    top: 15px;
-    right: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .platformModal {
-    padding: 0.5rem;
-  }
-  .platformCard {
-    padding: 0.5rem;
-  }
-  .closePlatformButton {
-    font-size: 18px;
-    padding: 6px;
-    top: 10px;
-    right: 10px;
+  .skillItem {
+    font-size: 1rem;
+    padding: 0.2rem 0.7rem;
   }
 }

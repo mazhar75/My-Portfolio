@@ -1,120 +1,223 @@
-/* src/components/Contact/Contact.module.css */
-.contact {
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(10px);
-    padding: 4rem 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    text-align: center;
-  }
-  
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #fff;
-  }
-  
-  p {
-    color: #ccc;
-    margin-bottom: 2rem;
-  }
-  
-  .contactInfo {
-    margin-bottom: 2rem;
-  }
-  
-  .contactInfo p {
-    font-size: 1.1rem;
-    margin: 0.5rem 0;
-  }
-  
-  .contactForm {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  .formGroup {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-  input, textarea {
-    padding: 0.75rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.05);
-    color: #fff;
-    font-size: 1rem;
-  }
-  
-  textarea {
-    resize: vertical;
-    min-height: 150px;
-  }
-  
-  .submitButton {
-    padding: 0.75rem 1.5rem;
-    background: #00bcd4;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  .submitButton:hover {
-    background: #0097a7;
-  }
-  /* Close Button */
-/* Close Button */
-.closeButton {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: rgba(255, 255, 255, 0.2);
+/* Modern Contact Section Styles */
+.contactSection {
+  background: linear-gradient(135deg, #23243a 0%, #3a3d5c 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.contactContainer {
+  background: rgba(0,0,0,0.7);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,188,212,0.10);
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
   color: #fff;
-  border: none;
-  font-size: 20px;
-  padding: 10px;
-  border-radius: 50%;
-  backdrop-filter: blur(8px); /* Glass effect */
-  cursor: pointer;
-  transition: background 0.3s ease;
 }
 
-/* Hover and focus states */
-.closeButton:hover {
-  background: rgba(255, 255, 255, 0.3);
+.contactTitle {
+  font-size: 2rem;
+  color: #00bcd4;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  text-align: center;
 }
 
-.closeButton:focus {
+.contactSubtitle {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contactInfoBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+}
+
+.contactInfoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1.05rem;
+  color: #fff;
+}
+
+.contactInfoItem a {
+  color: #00bcd4;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.contactInfoItem a:hover {
+  color: #fff;
+}
+
+.contactIcon {
+  font-size: 1.2rem;
+  color: #00bcd4;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.formRow {
+  display: flex;
+  gap: 1rem;
+}
+
+.input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  font-size: 1rem;
   outline: none;
+  transition: border 0.2s;
 }
 
-/* Responsive styles */
+.input:focus {
+  border: 1.5px solid #00bcd4;
+}
+
+.textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  font-size: 1rem;
+  min-height: 120px;
+  resize: vertical;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.textarea:focus {
+  border: 1.5px solid #00bcd4;
+}
+
+.submitButton {
+  padding: 0.85rem 2.5rem;
+  background: #00bcd4;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 188, 212, 0.15);
+  transition: background 0.3s, transform 0.2s;
+  margin: 0 auto;
+  display: block;
+}
+
+.submitButton:hover {
+  background: #0097a7;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.divider {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #00bcd4 0%, #3a3d5c 100%);
+  border-radius: 2px;
+  margin: 18px auto 24px auto;
+}
+
+.emailHighlight {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.08rem;
+  background: #00bcd4;
+  padding: 0.18rem 0.7rem;
+  border-radius: 16px;
+  margin-left: 0.5rem;
+  letter-spacing: 0.2px;
+}
+
+.socialLinksRow {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 0.7rem;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #00bcd4;
+  background: rgba(0,188,212,0.08);
+  padding: 0.4rem 1.1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, transform 0.18s;
+}
+
+.socialLink:hover {
+  background: #00bcd4;
+  color: #23243a;
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* Remove closeButton styles as the button is no longer used */
+.closeButton { display: none; }
+
 @media (max-width: 768px) {
-  .closeButton {
-    top: 15px; /* Adjust the position on smaller screens */
-    right: 15px;
-    font-size: 18px;
-    padding: 12px;
+  .contactContainer {
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+    max-width: 98vw;
+  }
+  .contactTitle {
+    font-size: 1.3rem;
+  }
+  .contactSubtitle {
+    font-size: 1rem;
+  }
+  .formRow {
+    flex-direction: column;
+    gap: 0.7rem;
   }
 }
 
 @media (max-width: 480px) {
-  .closeButton {
-    top: 20px; /* Adjust further for mobile screens */
-    right: 20px;
-    font-size: 16px;
-    padding: 14px;
+  .contactContainer {
+    padding: 0.5rem 0.2rem 0.5rem 0.2rem;
+  }
+  .contactTitle {
+    font-size: 1.1rem;
+  }
+  .contactSubtitle {
+    font-size: 0.9rem;
+  }
+  .input, .textarea {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.7rem;
   }
 }
+
+/* Old styles commented out for reference */
+/*
+.contact {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 4rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+*/
 

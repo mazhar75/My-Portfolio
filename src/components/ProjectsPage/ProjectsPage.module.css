@@ -1,185 +1,211 @@
-/* General Container */
+/* Modern Projects Page Layout */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-bottom: 40px;
-    padding: 20px;
-    background-color: #5188e6; /* Set a light gray background for the page */
-  }
-  
-  /* Title */
-  .title {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 40px;
-    color: #f8f7f7; /* Dark text color for visibility */
-  }
-  
-  /* Project Card */
-  .projectCard {
-    background-color: #0e1125; /* White background for project cards */
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .projectTitle {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #fbf5f5; /* Dark text color for project title */
-  }
-  
-  .projectDescription {
-    font-size: 1rem;
-    margin: 15px 0;
-    color: #fefafa; /* Light gray text for description */
-  }
-  
-  /* Technologies List */
-  .technologies {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .techItem {
-    display: inline-block;
-    background-color: #7cb0e4; /* Blue background for tech items */
-    color: rgb(34, 25, 25); /* White text color for contrast */
-    padding: 8px 12px;
-    border-radius: 4px;
-    margin-right: 8px;
-    margin-bottom: 8px;
-    font-size: 0.9rem;
-  }
-  
-  /* Links */
-  .links a {
-    color: #007bff; /* Blue link color */
-    text-decoration: none;
-    font-weight: 600;
-    margin-right: 20px;
-  }
-  
-  .links a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Icons */
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #23243a;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #00bcd4;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.projectGroup {
+  margin-bottom: 2.5rem;
+}
+
+.groupTitle {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.projectCard {
+  background: linear-gradient(135deg, #2e2f4d 0%, #3a3d5c 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,188,212,0.10), 0 1.5px 8px rgba(0,0,0,0.10);
+  padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.18s, box-shadow 0.18s, border 0.18s;
+  border: 2px solid rgba(0,188,212,0.10);
+  position: relative;
+  overflow: hidden;
+}
+
+.projectCard:hover {
+  transform: translateY(-8px) scale(1.045);
+  box-shadow: 0 8px 32px rgba(0,188,212,0.18), 0 2px 16px rgba(0,0,0,0.13);
+  border: 2.5px solid #00bcd4;
+}
+
+.projectIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1.1rem;
+  color: #00bcd4;
+  filter: drop-shadow(0 2px 8px rgba(0,188,212,0.18));
+  align-self: center;
+}
+
+.projectTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  color: #00bcd4;
+}
+
+.projectDescription {
+  font-size: 1.05rem;
+  color: #e0e0e0;
+  margin-bottom: 1.2rem;
+  min-height: 2.5rem;
+}
+
+.techStack {
+  margin-bottom: 1.1rem;
+}
+
+.techBadge {
+  display: inline-block;
+  background: #00bcd4;
+  color: #23243a;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.35rem 1rem;
+  border-radius: 20px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.2px;
+}
+
+.badge {
+  display: inline-block;
+  background: #00bcd4;
+  color: #23243a;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.3rem 1.1rem;
+  border-radius: 20px;
+  margin: 0.2rem 0.3rem 0.2rem 0;
+  letter-spacing: 0.2px;
+}
+
+.links {
+  margin-top: auto;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: #00bcd4;
+}
+
 .icon {
-  margin-right: 8px;
+  margin-right: 0.2rem;
   vertical-align: middle;
 }
+
 .closeButton {
-  margin-top: 20px;
-  margin-left: 560px;
-  padding: 10px 20px;
-  font-size: 16px;
-  color: rgb(252, 247, 247);
-  background-color:rgba(255, 255, 255, 0.1);
+  margin: 2.5rem auto 0 auto;
+  display: block;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #00bcd4;
   border: none;
-  border-radius: 5px;
+  border-radius: 30px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-weight: 600;
+  transition: background 0.3s;
 }
 
 .closeButton:hover {
-  background-color: #75797e;
+  background-color: #0097a7;
 }
-/* Button */
-.moreButton {
-  display: block;
-  margin: 20px auto 0;
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #ffffff;
-  background-color: #007bff;
-  border: none;
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 1.7rem;
+  }
+  .groupTitle {
+    font-size: 1.1rem;
+  }
+  .projectGrid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .projectCard {
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+  }
+  .projectTitle {
+    font-size: 1.05rem;
+  }
+  .projectDescription {
+    font-size: 0.95rem;
+  }
+  .techBadge {
+    font-size: 0.85rem;
+    padding: 0.25rem 0.7rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 1.25rem;
+  }
+  .groupTitle {
+    font-size: 1rem;
+  }
+  .projectCard {
+    padding: 0.8rem 0.4rem 0.7rem 0.4rem;
+  }
+  .projectTitle {
+    font-size: 0.95rem;
+  }
+  .projectDescription {
+    font-size: 0.85rem;
+  }
+  .techBadge {
+    font-size: 0.75rem;
+    padding: 0.18rem 0.5rem;
+  }
+}
+
+/* Old styles commented out for reference */
+/*
+.projectCard {
+  background-color: #0e1125;
   border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  padding: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
-.moreButton:hover {
-  background-color: #0056b3;
-}
-
-
-  /* Images */
-  .images {
-    margin-top: 20px;
-  }
-  
-  .projectImage {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 15px;
-  }
-  
-  /* Responsive Layout */
-  @media screen and (max-width: 768px) {
-    .container {
-      padding: 15px;
-    }
-  
-    .title {
-      font-size: 1.5rem;
-    }
-  
-    .projectCard {
-      padding: 15px;
-    }
-  
-    .projectTitle {
-      font-size: 1.5rem;
-    }
-  
-    .projectDescription {
-      font-size: 0.9rem;
-    }
-  
-    .techItem {
-      font-size: 0.85rem;
-    }
-  
-    .links a {
-      font-size: 0.9rem;
-    }
-  
-    .projectImage {
-      width: 100%;
-    }
-  }
-  
-  @media screen and (max-width: 480px) {
-    .title {
-      font-size: 1.25rem;
-    }
-  
-    .projectCard {
-      padding: 10px;
-    }
-  
-    .projectTitle {
-      font-size: 1.3rem;
-    }
-  
-    .projectDescription {
-      font-size: 0.85rem;
-    }
-  
-    .techItem {
-      font-size: 0.8rem;
-    }
-  
-    .links a {
-      font-size: 0.85rem;
-    }
-  
-    .projectImage {
-      width: 100%;
-      margin-bottom: 10px;
-    }
-  }
+*/
   

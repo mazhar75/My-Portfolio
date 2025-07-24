@@ -1,6 +1,6 @@
 # Portfolio Website
 
-Welcome to my portfolio repository! This project is a personal portfolio website built with **React** and is hosted on **Vercel**. The site showcases my work, projects, and skills in web development.
+Welcome to my portfolio repository! This project is a personal portfolio website built with **React** and is hosted on **Vercel**. The site showcases my work, projects, and skills in web development, competitive programming, and research.
 
 ---
 
@@ -11,6 +11,7 @@ Welcome to my portfolio repository! This project is a personal portfolio website
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
 - [Project Structure](#project-structure)
+- [AI Assistant (MIN)](#ai-assistant-min)
 - [Contributing](#contributing)
 - [Contact](#contact)
 
@@ -30,6 +31,9 @@ Check out the live site hosted on Vercel:
 - **Project Showcase:** Detailed pages for individual projects with images and descriptions.
 - **Contact Form:** Easy-to-use form to reach out via email.
 - **Clean & Modern Design:** Aesthetically pleasing and user-friendly layout.
+- **AI Assistant (MIN):** Floating chat assistant for Q&A about Mazharul Islam, available on every page.
+- **Skills Highlight Bar:** Horizontal bar above Competitive Programming, emphasizing key skills (especially Golang).
+- **Competitive Programming Card:** Click to view detailed platform stats, rankings, and achievements in a modern modal.
 
 ---
 
@@ -37,8 +41,8 @@ Check out the live site hosted on Vercel:
 
 - **React:** Front-end library for building user interfaces.
 - **Vercel:** Platform for hosting and deploying the application.
-- **CSS:** Styling and design of the website.
-
+- **CSS Modules:** Modular and maintainable styling.
+- **react-icons:** Icon library for modern UI.
 
 ---
 
@@ -49,36 +53,20 @@ To run this project locally, follow these steps:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/your-portfolio.git
-   cd your-portfolio
+   git clone https://github.com/mazhar75/My-Portfolio.git
+   cd My-Portfolio
    ```
 
 2. **Install dependencies:**
-
-   If you are using npm:
 
    ```bash
    npm install
    ```
 
-   Or with Yarn:
-
-   ```bash
-   yarn install
-   ```
-
 3. **Start the development server:**
-
-   With npm:
 
    ```bash
    npm start
-   ```
-
-   With Yarn:
-
-   ```bash
-   yarn start
    ```
 
 4. **Open your browser:**
@@ -92,17 +80,31 @@ To run this project locally, follow these steps:
 Here's an overview of the main directories and files in this project:
 
 ```
-your-portfolio/
+My-Portfolio/
 ├── public/             # Static files and assets
 ├── src/                # Source code
-│   ├── components/     # Reusable components (header, footer, etc.)
-│   ├── pages/          # Different pages (Home, Projects, Contact, etc.)
+│   ├── components/     # Reusable components (cards, modals, AI assistant, etc.)
+│   │   ├── Card/
+│   │   ├── CardDetails/
+│   │   ├── CompetitiveProgrammingBar/
+│   │   ├── MinAssistant/   # AI Assistant (MIN)
+│   │   └── ...
+│   ├── data/           # Data for cards and projects
 │   ├── App.js          # Main application component
 │   └── index.js        # Entry point of the application
 ├── .gitignore          # Files and directories to ignore in Git
 ├── package.json        # Project metadata and dependencies
 └── README.md           # This file
 ```
+
+---
+
+## AI Assistant (MIN)
+
+- Click the robot button at the bottom right to open the AI assistant chat.
+- Ask questions about Mazharul Islam, skills, projects, or experience.
+- The assistant uses in-memory chat and will POST to `/api/min-chat` (backend integration required for live answers).
+- Chat history resets when closed.
 
 ---
 
@@ -117,3 +119,8 @@ Contributions are welcome! If you find a bug or have a feature request, please o
 5. Open a pull request.
 
 ---
+
+## Notes
+
+- The default branch is **master** (not main).
+- For any issues, please contact [mazharulnihadmd@gmail.com](mailto:mazharulnihadmd@gmail.com).
